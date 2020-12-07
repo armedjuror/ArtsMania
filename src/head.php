@@ -16,6 +16,7 @@ require 'sessions.php';
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/sticky-footer-navbar/">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/logo-min.png" type="image/x-icon">
     <title>ARTS MANIA |  SKJM, SKSBV KOZHIKODE DISTRCT</title>
@@ -32,8 +33,11 @@ require 'sessions.php';
 
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="dashboard.php">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="participants.php">Participants</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="events.php">Events</a>
@@ -52,3 +56,10 @@ require 'sessions.php';
         </div>
     </nav>
 </header>
+<div class="loader" id="AjaxLoader" style="display:none;">
+    <div class="strip-holder">
+        <div class="strip-1"></div>
+        <div class="strip-2"></div>
+        <div class="strip-3"></div>
+    </div>
+</div>
