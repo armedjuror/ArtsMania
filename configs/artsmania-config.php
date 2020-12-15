@@ -45,7 +45,7 @@ function check_file($file, $allowed_extensions, $max_size, $size_error){
 
 function get_participants_table($connection, $range_id){
     $table = '
-    <table class="table table-hover">
+    <table class="table table-hover table-responsive-lg" id="participants-list">
                             <thead>
                             <tr>
                                 <th scope="col">ID</th>
@@ -82,7 +82,11 @@ function get_participants_table($connection, $range_id){
                                         <td>'. $row['participant_class'] .'</td>
                                         <td>'. $row['participant_dob'] .'</td>
                                         <td>'. $row['participant_mobile'] .'</td>
-                                        <td class="text-danger"><i class="fa fa-trash"></i>&nbsp;&nbsp;DELETE</td>
+                                        <td class="text-danger">
+                                            <form id="'.$row['participant_id'].'" onsubmit="return delete_participant(\''.$row['participant_id'].'\')">
+                                               <button class="btn text-danger" type="submit"><i class="fa fa-trash"></i>&nbsp;&nbsp;DELETE</button>
+                                            </form>
+                                        </td>
                                     </tr>
                                     ';
             }
